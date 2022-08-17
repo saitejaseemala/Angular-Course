@@ -1,0 +1,34 @@
+<!-- String Interpolation -->
+<h3>String Interpolation</h3>
+<p>Server With Id : {{ serverId }} has status as {{ getServerStatus() }}</p>
+<hr />
+
+<!-- Property Binding & Event Binding -->
+
+<h3>Property Binding & Event Binding</h3>
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+>
+  Add Server
+</button>
+
+<p>{{ serverCreationStatus }}</p>
+
+<!-- Event Binding with $event parameter passing -->
+
+<input
+  type="text"
+  class="form-control"
+  placeholder="Event Binding"
+  (input)="onInputChange($event)"
+/>
+<p>{{ inputField }}</p>
+<hr />
+
+<!-- Two-way Binding -->
+<h3>Two-Way Binding</h3>
+<input type="text" class="form-control" (input)="onTextChange($event)" />
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+<p>{{ serverName }}</p>

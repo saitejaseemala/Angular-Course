@@ -1,0 +1,9 @@
+input {
+  margin: 30px 0;
+}
+
+.online {
+  color: white;
+  padding: 20px;
+  width: 75%;
+}
